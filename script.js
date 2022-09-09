@@ -6,40 +6,36 @@ var saveButtonEl = $(".saveBtn");
 
 // Need to use these elements, but they may be moved into functions later!:
 var timeBlockEl = $(".time-block");
-var rowEl = $(".row");
-var hourEl = $(".hour");
 var pastEl = $(".past");
 var presentEl = $(".present"); 
 var futureEL = $(".future");
 
-
-// TO DO:
-// Append things to containerEl????
-
 textareaEl.addClass('.description');
 
+
+
+
 // Need to save plans
-function savePlans() {
+saveButtonEl.on('click', function(event) {
+    event.preventDefault();
+
     var plans = {textareaEl: textareaEl.value};
+
     // Need localStorage
     localStorage.setItem("plans", JSON.stringify(plans));
-};
+    renderDescription();
+});
 
 // need to display saved description and get localStorage
 function renderDescription() {
+    var plans = textareaEl.value;
+    console.log(plans);
     var lastPlans = JSON.parse(localStorage.getItem("plans"));
     if (lastPlans !== null) {
         document.getElementsByClassName("description").value += lastPlans.value;
-    } else {
-    return;
     }
 };
 
-// Need a save button event with preventDefault:
-saveButtonEl.on('click', function(event) {
-    event.preventDefault();
-    savePlans();
-});
 
 // Need loop for every hour?
 
