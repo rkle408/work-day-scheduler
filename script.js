@@ -10,7 +10,6 @@ function displayTime() {
 // Declare function
 setInterval(displayTime, 1000);
 
-
 // Need variables for every hour
 var sevenAmText = $('#7amText');
 var eightAmText = $('#8amText');
@@ -39,8 +38,6 @@ var threePmBtn = $('.3pmsaveBtn');
 var fourPmBtn = $('.4pmsaveBtn');
 var fivePmBtn = $('.5pmsaveBtn');
 
-// Need to do functions for every hour
-
 // Need to save plans
 // WILL NEED TO REDO NAMES TO MATCH HTML
 sevenAmBtn.on('click', function(event) {
@@ -64,4 +61,28 @@ if (now > 7) {
     $('#7amText').addClass('present');
 } else { 
     $('#7amText').addClass('future');
+}
+
+// Need to do for every hour...
+
+eightAmBtn.on('click', function(event) {
+    event.preventDefault();
+
+    // Need localStorage
+    console.log($("#8amText").val());
+    localStorage.setItem("eightAm", $("#8amText").val());
+    console.log("saved");
+});
+
+let eightAmStored = localStorage.getItem("eightAm");
+sevenAmText.val(sevenAmStored);
+
+// Need to get past, present, future colors
+
+if (now > 8) {
+    $('#8amText').addClass('past');
+} else if (now === 8) {
+    $('#8amText').addClass('present');
+} else { 
+    $('#8amText').addClass('future');
 }
