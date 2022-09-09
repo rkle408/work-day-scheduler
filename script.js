@@ -70,7 +70,6 @@ eightAmBtn.on('click', function(event) {
 
     console.log($("#8amText").val());
     localStorage.setItem("eightAm", $("#8amText").val());
-    // console.log("saved");
 });
 
 var eightAmStored = localStorage.getItem("eightAm");
@@ -91,7 +90,6 @@ nineAmBtn.on('click', function(event) {
 
     console.log($("#9amText").val());
     localStorage.setItem("nineAm", $("#9amText").val());
-    // console.log("saved");
 });
 
 var nineAmStored = localStorage.getItem("nineAm");
@@ -112,7 +110,6 @@ tenAmBtn.on('click', function(event) {
 
     console.log($("#10amText").val());
     localStorage.setItem("tenAm", $("#10amText").val());
-    //console.log("saved");
 });
 
 var tenAmStored = localStorage.getItem("tenAm");
@@ -133,7 +130,6 @@ elevenAmBtn.on('click', function(event) {
 
     console.log($("#11amText").val());
     localStorage.setItem("elevenAm", $("#11amText").val());
-    // console.log("saved");
 });
 
 var elevenAmStored = localStorage.getItem("elevenAm");
@@ -154,7 +150,6 @@ twelvePmBtn.on('click', function(event) {
 
     console.log($("#12pmText").val());
     localStorage.setItem("twelvePm", $("#12pmText").val());
-    // console.log("saved");
 });
 
 var twelvePmStored = localStorage.getItem("twelvePm");
@@ -166,4 +161,104 @@ if (now > 12) {
     $('#12pmText').addClass('present');
 } else { 
     $('#12pmText').addClass('future');
+}
+
+// Military time
+
+onePmBtn.on('click', function(event) {
+    event.preventDefault();
+
+    console.log($("#1pmText").val());
+    localStorage.setItem("onePm", $("#1pmText").val());
+});
+
+var onePmStored = localStorage.getItem("onePm");
+onePmText.val(onePmStored);
+
+if (now > 13) {
+    $('#1pmText').addClass('past');
+} else if (now === 13) {
+    $('#1pmText').addClass('present');
+} else { 
+    $('#1pmText').addClass('future');
+}
+
+//
+
+twoPmBtn.on('click', function(event) {
+    event.preventDefault();
+
+    console.log($("#2pmText").val());
+    localStorage.setItem("twoPm", $("#2pmText").val());
+});
+
+var twoPmStored = localStorage.getItem("twoPm");
+twoPmText.val(twoPmStored);
+
+if (now > 14) {
+    $('#2pmText').addClass('past');
+} else if (now === 14) {
+    $('#2pmText').addClass('present');
+} else { 
+    $('#2pmText').addClass('future');
+}
+
+//
+
+threePmBtn.on('click', function(event) {
+    event.preventDefault();
+
+    console.log($("#3pmText").val());
+    localStorage.setItem("threePm", $("#3pmText").val());
+});
+
+var threePmStored = localStorage.getItem("threePm");
+threePmText.val(threePmStored);
+
+if (now > 15) {
+    $('#3pmText').addClass('past');
+} else if (now === 15) {
+    $('#3pmText').addClass('present');
+} else { 
+    $('#3pmText').addClass('future');
+}
+
+//
+
+fourPmBtn.on('click', function(event) {
+    event.preventDefault();
+
+    console.log($("#4pmText").val());
+    localStorage.setItem("fourPm", $("#4pmText").val());
+});
+
+var fourPmStored = localStorage.getItem("fourPm");
+fourPmText.val(fourPmStored);
+
+if (now > 16) {
+    $('#4pmText').addClass('past');
+} else if (now === 16) {
+    $('#4pmText').addClass('present');
+} else { 
+    $('#4pmText').addClass('future');
+}
+
+//
+
+fivePmBtn.on('click', function(event) {
+    event.preventDefault();
+
+    console.log($("#5pmText").val());
+    localStorage.setItem("fivePm", $("#5pmText").val());
+});
+
+var fivePmStored = localStorage.getItem("fivePm");
+fivePmText.val(fivePmStored);
+
+if (now > 17) {
+    $('#5pmText').addClass('past');
+} else if (now === 17) {
+    $('#5pmText').addClass('present');
+} else { 
+    $('#5pmText').addClass('future');
 }
