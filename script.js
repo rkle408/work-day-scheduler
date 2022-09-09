@@ -10,8 +10,6 @@ var pastEl = $(".past");
 var presentEl = $(".present"); 
 var futureEL = $(".future");
 
-textareaEl.addClass('.description');
-
 
 
 
@@ -29,7 +27,7 @@ saveButtonEl.on('click', function(event) {
 // need to display saved description and get localStorage
 function renderDescription() {
     var plans = textareaEl.value;
-    console.log(plans);
+    console.log(textareaEl);
     var lastPlans = JSON.parse(localStorage.getItem("plans"));
     if (lastPlans !== null) {
         document.getElementsByClassName("description").value += lastPlans.value;
