@@ -40,7 +40,7 @@ var fivePmBtn = $('.5pmsaveBtn');
 
 // Need to save plans once button is clicked
 sevenAmBtn.on('click', function(event) {
-    // To prevent data loss when page is refreshed
+    // To prevent data loss when button is clicked
     event.preventDefault(); 
 
     // Need to store data in localStorage
