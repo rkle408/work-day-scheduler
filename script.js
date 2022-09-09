@@ -1,8 +1,8 @@
 // Confirmed Variables Here:
 var currentDayElement = $("#currentDay");
 var containerEl = $(".container");
-var textareaEl = $("textarea");
-var saveButtonEl = $(".saveBtn");
+var textareaEl = $("textarea"); // will delete
+var saveButtonEl = $(".saveBtn"); // will delete
 
 // Need to use these elements, but they may be moved into functions later!:
 var timeBlockEl = $(".time-block");
@@ -11,9 +11,8 @@ var presentEl = $(".present");
 var futureEL = $(".future");
 
 
-
-
 // Need to save plans
+// WILL NEED TO REDO NAMES TO MATCH HTML
 saveButtonEl.on('click', function(event) {
     event.preventDefault();
 
@@ -30,7 +29,7 @@ function renderDescription() {
     console.log(textareaEl);
     var lastPlans = JSON.parse(localStorage.getItem("plans"));
     if (lastPlans !== null) {
-        document.getElementsByClassName("description").value += lastPlans.value;
+        document.getElementsByClassName("")// THIS WILL NEED NEW NAME WHEN DONE).value += lastPlans.value;
     }
 };
 
@@ -46,3 +45,9 @@ function displayTime() {
 
 // Declare function
 setInterval(displayTime, 1000);
+
+
+// Need variables for every hour
+
+
+// Need to do functions for every hour
