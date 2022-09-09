@@ -1,13 +1,13 @@
 // Confirmed Variables Here:
 var currentDayElement = $("#currentDay");
 
-// Function to display time in jumbotron
+// Function to display time in jumbotron (only requires date, but more convenient to have the time as well!)
 function displayTime() {
     var timeNow = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
     currentDayElement.text(timeNow);
 }
 
-// Declare function
+// Declare time function
 setInterval(displayTime, 1000);
 
 // Need variables for every hour
@@ -38,21 +38,22 @@ var threePmBtn = $('.3pmsaveBtn');
 var fourPmBtn = $('.4pmsaveBtn');
 var fivePmBtn = $('.5pmsaveBtn');
 
-// Need to save plans
-// WILL NEED TO REDO NAMES TO MATCH HTML
+// Need to save plans once button is clicked
 sevenAmBtn.on('click', function(event) {
-    event.preventDefault();
+    // To prevent data loss when page is refreshed
+    event.preventDefault(); 
 
-    // Need localStorage
+    // Need to store data in localStorage
     console.log($("#7amText").val());
     localStorage.setItem("sevenAm", $("#7amText").val());
-    // console.log("saved");
+    // console.log("saved"); this was just a test
 });
 
+// This will allow the data to be displayed even if the page is refreshed!
 var sevenAmStored = localStorage.getItem("sevenAm");
 sevenAmText.val(sevenAmStored);
 
-// Need to get past, present, future colors
+// Need to get past, present, future colors already stored in CSS! (The CSS white font is difficult to read though...)
 var now = moment().hour();
 
 if (now > 7) {
