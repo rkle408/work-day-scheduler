@@ -10,28 +10,7 @@ var pastEl = $(".past");
 var presentEl = $(".present"); 
 var futureEL = $(".future");
 
-
-// Need to save plans
-// WILL NEED TO REDO NAMES TO MATCH HTML
-saveButtonEl.on('click', function(event) {
-    event.preventDefault();
-
-    var plans = {textareaEl: textareaEl.value};
-
-    // Need localStorage
-    localStorage.setItem("plans", JSON.stringify(plans));
-    renderDescription();
-});
-
-// need to display saved description and get localStorage
-function renderDescription() {
-    var plans = textareaEl.value;
-    console.log(textareaEl);
-    var lastPlans = JSON.parse(localStorage.getItem("plans"));
-    if (lastPlans !== null) {
-        document.getElementsByClassName("")// THIS WILL NEED NEW NAME WHEN DONE).value += lastPlans.value;
-    }
-};
+//
 
 
 // Need loop for every hour?
@@ -76,3 +55,17 @@ var fourPmBtn = $('.4pmsaveBtn');
 var fivePmBtn = $('.5pmsaveBtn');
 
 // Need to do functions for every hour
+
+// Need to save plans
+// WILL NEED TO REDO NAMES TO MATCH HTML
+sevenAmBtn.on('click', function(event) {
+    event.preventDefault();
+
+    // Need localStorage
+    console.log($("#7amtext").val());
+    localStorage.setItem("sevenAm", $("#7amtext").val());
+    console.log("saved");
+});
+
+let sevenAmStored = localStorage.getItem("sevenAm");
+sevenAmText.val(sevenAmStored);
