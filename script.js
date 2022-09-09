@@ -1,12 +1,6 @@
 // Confirmed Variables Here:
 var currentDayElement = $("#currentDay");
 
-// Need to use these elements, but they may be moved into functions later!:
-var timeBlockEl = $(".time-block");
-var pastEl = $(".past");
-var presentEl = $(".present"); 
-var futureEL = $(".future");
-
 // Function to display time in jumbotron
 function displayTime() {
     var timeNow = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
@@ -18,18 +12,18 @@ setInterval(displayTime, 1000);
 
 
 // Need variables for every hour
-var sevenAmText = $('#7amtext');
-var eightAmText = $('#8amtext');
-var nineAmText = $('#9amtext');
-var tenAmText = $('#10amtext');
-var elevenAmText = $('#11amtext');
+var sevenAmText = $('#7amText');
+var eightAmText = $('#8amText');
+var nineAmText = $('#9amText');
+var tenAmText = $('#10amText');
+var elevenAmText = $('#11amText');
 
-var twelvePmText = $('#12pmtext');
-var onePmText = $('#1pmtext');
-var twoPmText = $('#2pmtext');
-var threePmText = $('#3pmtext');
-var fourPmText = $('#4pmtext');
-var fivePmText = $('#5pmtext');
+var twelvePmText = $('#12pmText');
+var onePmText = $('#1pmText');
+var twoPmText = $('#2pmText');
+var threePmText = $('#3pmText');
+var fourPmText = $('#4pmText');
+var fivePmText = $('#5pmText');
 
 // Need variables for every button
 var sevenAmBtn = $('.7amsaveBtn');
@@ -53,8 +47,8 @@ sevenAmBtn.on('click', function(event) {
     event.preventDefault();
 
     // Need localStorage
-    console.log($("#7amtext").val());
-    localStorage.setItem("sevenAm", $("#7amtext").val());
+    console.log($("#7amText").val());
+    localStorage.setItem("sevenAm", $("#7amText").val());
     console.log("saved");
 });
 
@@ -62,3 +56,12 @@ let sevenAmStored = localStorage.getItem("sevenAm");
 sevenAmText.val(sevenAmStored);
 
 // Need to get past, present, future colors
+let now = moment().hour();
+
+if (now > 7) {
+    $('#7amText').addClass('past');
+} else if (now === 7) {
+    $('#7amText').addClass('present');
+} else { 
+    $('#7amText').addClass('future');
+}
