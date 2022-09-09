@@ -18,10 +18,6 @@ var futureEL = $(".future");
 
 textareaEl.addClass('.description');
 
-
-
-// Need to make timeblocks
-
 // Need to save plans
 function savePlans() {
     var plans = {textareaEl: textareaEl.value};
@@ -43,7 +39,6 @@ function renderDescription() {
 saveButtonEl.on('click', function(event) {
     event.preventDefault();
     savePlans();
-
 });
 
 // Need loop for every hour?
