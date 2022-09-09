@@ -1,20 +1,11 @@
 // Confirmed Variables Here:
 var currentDayElement = $("#currentDay");
-var containerEl = $(".container");
-var textareaEl = $("textarea"); // will delete
-var saveButtonEl = $(".saveBtn"); // will delete
 
 // Need to use these elements, but they may be moved into functions later!:
 var timeBlockEl = $(".time-block");
 var pastEl = $(".past");
 var presentEl = $(".present"); 
 var futureEL = $(".future");
-
-//
-
-
-// Need loop for every hour?
-
 
 // Function to display time in jumbotron
 function displayTime() {
@@ -69,3 +60,5 @@ sevenAmBtn.on('click', function(event) {
 
 let sevenAmStored = localStorage.getItem("sevenAm");
 sevenAmText.val(sevenAmStored);
+
+// Need to get past, present, future colors
