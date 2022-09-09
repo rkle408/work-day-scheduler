@@ -2,7 +2,15 @@
 
 ## A simple scheduler that saves your important events, with color coding for the current time.
 
+Have you ever needed a planner to keep you on task while at work? Well, you're in luck, we have a planner that not only stores your notes, but it also changes color with the current time, so you'll easily know which task you should be on now! With all the current available distractions we have now, you'll want to keep this window open in the background! But even if you don't, your plans wil be stored when you re-open the window.
 
+In building this application, my goal was to utilize only what was in my knowledge-base of JS and jQuery, as difficult, time-consuming, and inefficient as it may be. In order to become a great web developer, as in any profession, I must have a solid and unshakeable foundation. I realize that if this planner were to feature more hours, or even days, weeks, months, this would be a huge and tedious task to execute using the current code, yet I am grateful that I am able to come up with a logical pathway I wanted to follow, and was able to execute (though not without multiple issues and re-visiting issues).
+
+I learned that details are incredibly important to coding, every single capitalized letter, comma, and placement! I learned how difficult it must've been to develop simple websites when technology was not as advanced as it is now. I learned that I appreciate Google Calendar so much, even if it doesn't always give me a drop-down menu of locations sometimes.
+
+Of course, as I learn more and more, my appreciation for coders, teachers, and technology grows exponentially.
+
+### Deployed website: <https://rkle408.github.io/work-day-scheduler/>
 
 ## Screenshot (full, initial page):
 ![screencapture1](https://user-images.githubusercontent.com/108099192/189455647-a8c88676-3f1e-41ec-ad27-07b3718a5e0b.png)
